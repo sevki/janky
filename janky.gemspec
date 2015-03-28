@@ -32,7 +32,7 @@ EOL
 
   # test
   s.add_development_dependency "database_cleaner", "~>0.6"
-  s.add_development_dependency "mocha", "~>0.10.4"
+  s.add_development_dependency "mocha", "~>0.14.0"
 
   s.files = %w[
 CHANGES
@@ -57,6 +57,7 @@ lib/janky/builder/runner.rb
 lib/janky/chat_service.rb
 lib/janky/chat_service/campfire.rb
 lib/janky/chat_service/hipchat.rb
+lib/janky/chat_service/hubot.rb
 lib/janky/chat_service/slack.rb
 lib/janky/chat_service/mock.rb
 lib/janky/commit.rb

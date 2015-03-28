@@ -48,7 +48,7 @@ Of a specific branch:
 
     hubot ci build janky/libgit2
 
-Different builds aren't relevant to the same Campfire room and so Janky
+Different builds aren't relevant to the same chat room and so Janky
 lets you choose where notifications are sent to. First get a list of
 available rooms:
 
@@ -79,7 +79,7 @@ Installing
 
 ### Jenkins
 
-Janky requires access to a Jenkins server. Version **1.427** is
+Janky requires access to a Jenkins server. Version **1.580** is
 recommended. Refer to the Jenkins [documentation][doc] for installation
 instructions and install the [Notification Plugin][np] version 1.4.
 
@@ -246,10 +246,16 @@ Sends notifications to Hubot via [janky script](http://git.io/hubot-janky).
 
 Required settings:
 
+* `JANKY_CHAT=hubot`
 * `JANKY_CHAT_HUBOT_URL`: URL to your Hubot instance.
 * `JANKY_CHAT_HUBOT_ROOMS`: List of rooms which can be set via `ci set room`.
   * For IRC: Comma-separated list of channels `"#room, #another-room"`
   * For Campfire/HipChat: List with room id and name `"34343:room, 23223:another-room"`
+  * For Slack: List with room names `"room, another-room"`
+
+Installation:
+* Add `require "janky/chat_service/hubot"` to the `config/environment.rb`
+  file **before** the `Janky.setup(ENV)` line.
 
 ### Authentication
 
