@@ -1,3 +1,4 @@
+require 'json'
 module Janky
   class App < Sinatra::Base
     register Mustache::Sinatra
@@ -43,7 +44,11 @@ module Janky
       @builds = Build.queued.first(50)
       mustache :index
     end
-
+    get "/builds" do
+      authorize_index
+      @builds = Build.queued.first(50)
+      JSON.generate(@builds)
+    end
     get "/:build_id/output" do |build_id|
       @build = Build.select(:output).find(build_id)
       authorize_repo(@build.repo)
