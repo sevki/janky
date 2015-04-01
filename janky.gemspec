@@ -24,7 +24,7 @@ EOL
   s.add_dependency "activerecord", "~>3.2.0"
   s.add_dependency "broach", "~>0.2"
   s.add_dependency "replicate", "~>1.4"
-  s.add_dependency "ansi-sys", "~>0.8.3"
+  s.add_dependency "terminal", "~> 2.0.0"
   # development
   s.add_development_dependency "shotgun", "~>0.9"
   s.add_development_dependency "thin", "~>1.2"

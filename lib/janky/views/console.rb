@@ -1,4 +1,4 @@
-require 'ansisys'
+require 'terminal'
 module Janky
   module Views
     class Console < Layout
@@ -27,9 +27,7 @@ module Janky
       end
 
       def output
-        terminal = AnsiSys::Terminal.new
-        terminal.echo(@build.output)
-        terminal.render
+        Terminal.render(@build.output)
       end
 
       def jenkins_url
