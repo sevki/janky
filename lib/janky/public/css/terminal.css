@@ -10,27 +10,35 @@ body {
   padding: 14px 18px;
   white-space: pre-wrap;
 }
-a { color: #00ff00; }
-.term-fg1 { } /* don't bold beccause it looks weird */
+pre {
+  font-family: 'Source Code Pro', monospace ;
+}
+a { color: silver; }
+.term-fg1 { font-weight: bold } /* don't bold beccause it looks weird */
 .term-fg3 { font-style: italic; } /* italic */
 .term-fg4 { text-decoration: underline; } /* underline */
 .term-fg9 { text-decoration: line-through; } /* crossed-out */
 
 .term-fg30 { color: #666; } /* black (but we can't use black, so a diff color) */
-.term-fg31 { color: #e10c02; } /* red */
-.term-fg32 { color: #99ff5e; } /* green */
-.term-fg33 { color: #c6c502; } /* yellow */
-.term-fg34 { color: #8db7e0; } /* blue */
-.term-fg35 { color: #f271fb; } /* magenta */
-.term-fg36 { color: #00cdd9; } /* cyan */
+.term-fg31 { color: #c31712; } /* red */
+.term-fg32 { color: #0dc600; } /* green */
+.term-fg33 { color: #ffd700; } /* yellow */
+.term-fg34 { color: #0000af; } /* blue */
+.term-fg35 { color: #ff00ff; } /* magenta */
+.term-fg36 { color: #5fafff; } /* cyan */
 
 /* high intense colors */
 .term-fgi1 { color: #5ef765; }
 .term-fgi90 { color: #838887; } /* grey */
 
 /* background colors */
-.term-bg42 { background: #99ff5f; }
 .term-bg40 { background: #676767; }
+.term-bg41 { background: #c31712; }
+.term-bg42 { background: #0dc600; }
+.term-bg43 { background: #ffd700; }
+.term-bg44 { background: #0000af; }
+.term-bg45 { background: #ff00ff; }
+.term-bg46 { background: #5fafff; }
 
 /* custom foreground/background combos for readability */
 .term-fg31.term-bg40 { color: #F8A39F; }

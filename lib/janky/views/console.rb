@@ -26,6 +26,10 @@ module Janky
         @build.short_sha1
       end
 
+      def commit_message
+        @build.commit_message
+      end
+
       def output
         Terminal.render(@build.output)
       end
